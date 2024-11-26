@@ -19,7 +19,6 @@ const VerifyQRCode = () => {
         try {
             const response = await axios.post(`https://menu-management-system.onrender.com/qr/generate`);
             setImage(response.data.qrImagePath)
-            console.log(response.data.qrImagePath)
             setMessage(response.data.message); // Success message from backend
         } catch (err) {
             if (err.response) {
